@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MetricCard from "./MetricCard";
 import MetricChart from "./MetricChart";
-import { Cpu, Memory, Clock, Gauge, Server, Activity, LayoutPanelLeft } from "lucide-react";
+import { Cpu, HardDrive, Clock, Gauge, Server, Activity, LayoutPanelLeft } from "lucide-react";
 
 type MetricsData = {
   "app-startup": {
@@ -104,7 +104,7 @@ const PerformanceMetrics = ({ metrics }: PerformanceMetricsProps) => {
               value={avgMemoryUsage}
               unit=" bytes"
               maxValue={maxTotalMemory}
-              icon={<Memory size={18} />}
+              icon={<HardDrive size={18} />}
               delay={100}
             />
             <MetricCard 
@@ -158,7 +158,7 @@ const PerformanceMetrics = ({ metrics }: PerformanceMetricsProps) => {
               value={avgMemoryUsage}
               unit=" bytes"
               maxValue={maxTotalMemory}
-              icon={<Memory size={18} />}
+              icon={<HardDrive size={18} />}
               delay={100}
             />
             <MetricCard 
